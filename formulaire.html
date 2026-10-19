@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Pèmèt paj la montre aksan ak karaktè espesyal -->
+    <meta charset="UTF-8">
+
+    <!-- Pèmèt paj la adapte ak telefòn ak òdinatè -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tit ki parèt nan onglet navigatè a -->
+    <title>Formulaire Esther</title>
+
+    <!-- Aktive Tailwind CSS v4 san enstalasyon -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<!-- bg-slate-100 : koulè fon paj la -->
+<!-- min-h-screen : paj la gen omwen wotè ekran an -->
+<!-- p-6 : ajoute espas anndan paj la (24px) -->
+
+<body class="bg-slate-100 min-h-screen p-6">
+
+    <!-- main : kontni prensipal paj la -->
+    <!-- max-w-4xl : limite lajè kontni an -->
+    <!-- mx-auto : mete kontni an nan mitan orizontal -->
+    <!-- p-6 : espas anndan kontni an -->
+    <main class="max-w-4xl mx-auto p-6">
+
+        <!-- TIT FÒMILÈ A -->
+
+        <!-- text-4xl : gwo gwosè tèks -->
+        <!-- font-bold : fè tèks la gra -->
+        <!-- text-slate-900 : koulè fonse -->
+        <!-- mb-4 : espas anba tit la -->
+        <h1 class="text-4xl font-bold text-slate-900 mb-4">
+
+            Parlons de
+            <!-- span : pèmèt nou bay yon pati nan tit la yon lòt koulè -->
+            <!-- text-orange-600 : koulè oranj -->
+            <span class="text-orange-600">mon apprentissage</span>
+
+        </h1>
+
+        <!-- DESKRIPSYON -->
+
+        <!-- text-lg : gwosè tèks yon ti jan pi gwo -->
+        <!-- text-slate-600 : koulè gri -->
+        <!-- mb-8 : espas anba paragraf la -->
+        <p class="text-lg text-slate-600 mb-8">
+            
+<!-- PARAGRAPHE DE BIENVENUE -->
+
+<!-- text-lg : gwosè tèks la 18px -->
+<!-- text-slate-600 : koulè gri fonse -->
+<!-- mb-8 : ajoute 32px espas anba paragraf la -->
+
+<p class="text-lg text-slate-600 mb-8">
+
+    Bienvenue dans mon espace d'apprentissage !
+
+    Je m'appelle Esther et je découvre le développement web.
+    À travers cette page, je partage mon parcours et mes objectifs.
+
+    <!-- span : pèmèt mete yon pati tèks la an evidans -->
+    <!-- font-semibold : fè tèks la yon ti jan gra -->
+    <span class="font-semibold text-slate-800">
+        Et vous ? Partagez également votre parcours,
+        les technologies que vous apprenez et vos objectifs
+        en remplissant le formulaire ci-dessous.
+    </span>
+
+</p>
+
+
+
+        <!-- form : baliz ki rasanble chan fòmilè yo -->
+
+        <!-- FORMILÈ ESTHER -->
+        <form>
+
+            <!-- grid : òganize eleman yo an kolòn -->
+            <!-- grid-cols-1 : yon sèl kolòn sou ti ekran -->
+            <!-- md:grid-cols-2 : de kolòn depi ekran an rive 768px -->
+            <!-- gap-6 : 24px espas ant eleman yo -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- PREMYE CHAN : PRÉNOM -->
+                <div>
+
+                    <!-- block : label la pran pwòp liy li -->
+                    <!-- mb-2 : 8px espas anba label la -->
+                    <label for="prenom" class="block mb-2 font-bold text-slate-900">
+                        PRÉNOM
+                    </label>
+
+                    <!-- w-full : input la pran tout lajè kolòn li -->
+                    <!-- p-4 : 16px espas anndan -->
+                    <!-- border : bòdi -->
+                    <!-- rounded-xl : kwen awondi -->
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"
+                        class="w-full p-4 border border-slate-300 rounded-xl bg-slate-50">
+
+                </div>
+
+                <!-- DEZYÈM CHAN : NOM -->
+                <div>
+
+                    <label for="nom" class="block mb-2 font-bold text-slate-900">
+                        NOM
+                    </label>
+
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom"
+                        class="w-full p-4 border border-slate-300 rounded-xl bg-slate-50">
+
+
+                    <!-- TWAZYÈM CHAN : EMAIL -->
+                    <div>
+
+                        <!-- label : endike nou bezwen yon adrès imel -->
+                        <!-- for="email" : konekte etikèt la ak input la -->
+                        <label for="email" class="block mb-2 font-bold text-slate-900">
+                            EMAIL
+                        </label>
+
+                        <!-- type="email" : chan ki fèt pou adrès imel -->
+                        <!-- required : fè chan an obligatwa -->
+                        <!-- focus:outline-none : retire kontou navigatè a -->
+                        <!-- focus:ring-2 : ajoute yon bag vizib lè chan an aktif -->
+                        <!-- focus:ring-orange-500 : koulè bag la -->
+                        <input type="email" id="email" name="email" placeholder="Votre adresse email" required class="w-full p-4 border border-slate-300
+               rounded-xl bg-slate-50
+               focus:outline-none focus:ring-2
+               focus:ring-orange-500">
+
+                    </div>
+
+
+                    <!-- KATRIYÈM CHAN : FORMATION -->
+                    <div>
+
+                        <!-- label : non chan fòmasyon an -->
+                        <label for="formation" class="block mb-2 font-bold text-slate-900">
+                            FORMATION
+                        </label>
+
+                        <!-- select : kreye yon lis deroulan -->
+                        <!-- name : non done yo lè fòmilè a soumèt -->
+                        <!-- required : mande itilizatè a fè yon chwa -->
+                        <select id="formation" name="formation" required class="w-full p-4 border border-slate-300
+               rounded-xl bg-slate-50
+               focus:outline-none focus:ring-2
+               focus:ring-orange-500">
+
+                            <!-- Premye opsyon an se yon endikasyon -->
+                            <!-- value="" : pa gen okenn fòmasyon chwazi -->
+                            <option value="" disabled selected>
+                                Choisir une formation
+                            </option>
+
+                            <!-- option : chak chwa ki nan lis la -->
+                            <option value="web">
+                                Développement web
+                            </option>
+
+                            <option value="mobilet">
+                                Développement mobile
+                            </option>
+
+                            <option value="web">
+                                Base de données
+                            </option>
+
+                            <option value="web">
+                                Cybersécurité
+                            </option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SENKYÈM CHAN : TECHNOLOGIE -->
+                <div>
+
+                    <!-- label : idantifye chan TECHNOLOGIE a -->
+                    <!-- block : mete etikèt la sou yon liy apa -->
+                    <!-- mb-2 : ajoute 8px espas anba etikèt la -->
+                    <label for="technologie" class="block mb-2 font-bold text-slate-900">
+                        TECHNOLOGIE
+                    </label>
+
+                    <!-- select : kreye yon lis deroulan -->
+                    <!-- w-full : pran tout lajè kolòn nan -->
+                    <!-- p-4 : ajoute 16px espas anndan -->
+                    <!-- border : mete yon bòdi -->
+                    <!-- rounded-xl : awondi kwen yo -->
+                    <!-- focus:ring-2 : ajoute yon bag lè chan an aktif -->
+                    <select id="technologie" name="technologie" required class="w-full p-4 border border-slate-300
+               rounded-xl bg-slate-50
+               focus:outline-none focus:ring-2
+               focus:ring-orange-500">
+
+                        <!-- Opsyon sa a mande itilizatè a fè yon chwa -->
+                        <option value="" disabled selected>
+                            Choisir une technologie
+                        </option>
+
+                        <!-- Chak option reprezante yon chwa -->
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="tailwind">Tailwind CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="dart">Dart</option>
+                        <option value="flutter">Flutter</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SIZYÈM CHAN : NIVEAU -->
+                <div>
+
+                    <!-- label : endike ki enfòmasyon n ap mande -->
+                    <label for="niveau" class="block mb-2 font-bold text-slate-900">
+                        NIVEAU
+                    </label>
+
+                    <!-- select : pèmèt chwazi yon nivo -->
+                    <!-- required : fè chwa a obligatwa -->
+                    <select id="niveau" name="niveau" required class="w-full p-4 border border-slate-300
+               rounded-xl bg-slate-50
+               focus:outline-none focus:ring-2
+               focus:ring-orange-500">
+
+                        <option value="" disabled selected>
+                            Choisir votre niveau
+                        </option>
+
+                        <option value="debutant">Débutant</option>
+                        <option value="intermediaire">Intermédiaire</option>
+                        <option value="avance">Avancé</option>
+
+                    </select>
+
+                </div>
+
+                
+<!-- SETYÈM CHAN : MON OBJECTIF -->
+<!-- md:col-span-2 : fè bwat la okipe 2 kolòn sou ekran md+ -->
+<div class="md:col-span-2">
+
+    <!-- label : eksplike ki enfòmasyon pou antre -->
+    <!-- block : mete etikèt la sou pwòp liy li -->
+    <!-- mb-2 : ajoute 8px espas anba etikèt la -->
+    <label for="objectif"
+           class="block mb-2 font-bold text-slate-900">
+        MON OBJECTIF D'APPRENTISSAGE
+    </label>
+
+    <!-- textarea : chan pou ekri plizyè liy tèks -->
+    <!-- id : konekte chan an ak label la -->
+    <!-- name : idantifye done ki pral soumèt la -->
+    <!-- rows="5" : montre anviwon 5 liy tèks -->
+    <!-- placeholder : endikasyon pou itilizatè a -->
+    <!-- w-full : pran tout lajè bwat paran an -->
+    <!-- p-4 : mete espas anndan chan an -->
+    <!-- rounded-xl : awondi kwen yo -->
+    <!-- resize-y : pèmèt redimansyone chan an vètikal -->
+    <!-- focus:ring-2 : ajoute bag lè chan an aktif -->
+    <textarea
+        id="objectif"
+        name="objectif"
+        rows="5"
+        placeholder="Décrivez votre objectif d'apprentissage..."
+        class="w-full p-4 border border-slate-300
+               rounded-xl bg-slate-50 resize-y
+               focus:outline-none focus:ring-2
+               focus:ring-orange-300"
+    ></textarea>
+
+</div>
+
+
+            </div>
+
+            
+<!-- BOUTON POU SOUMÈT FÒMILÈ A -->
+
+<!-- mt-8 : ajoute 32px espas anlè bouton an -->
+<!-- flex : aktive Flexbox -->
+<!-- justify-end : mete bouton an adwat -->
+<div class="mt-8 flex justify-center">
+
+    <!-- button : kreye yon bouton HTML -->
+    <!-- type="submit" : mande soumèt fòmilè a -->
+
+    <!-- bg-slate-900 : fon bouton an ble trè fonse -->
+    <!-- text-white : tèks la blan -->
+    <!-- px-6 : 24px espas agoch ak adwat -->
+    <!-- py-3 : 12px espas anlè ak anba -->
+    <!-- rounded-xl : kwen awondi -->
+
+    <!-- hover:bg-orange-600 : chanje koulè lè sourit pase -->
+    <!-- focus-visible:ring-2 : bag lè bouton an resevwa focus klavye -->
+    <!-- active:scale-95 : bouton an vin yon ti jan pi piti lè peze -->
+    <!-- disabled:opacity-50 : diminye opasite si li dezaktive -->
+
+    <!-- transition-all : anime chanjman yo -->
+    <!-- duration-300 : animasyon an dire 300ms -->
+
+    <button
+        type="submit"
+        class="bg-slate-900 text-white
+               px-6 py-3 rounded-xl
+               font-semibold cursor-pointer
+               hover:bg-orange-600
+               focus-visible:outline-none
+               focus-visible:ring-2
+               focus-visible:ring-orange-500
+               focus-visible:ring-offset-2
+               active:scale-95
+               disabled:opacity-50
+               disabled:cursor-not-allowed
+               transition-all duration-300"
+    >
+        Partager mon parcours
+        <span aria-hidden="true">→</span>
+    </button>
+
+</div>
+
+
+        </form>
+
+
+
+    </main>
+
+</body>
+
+</html>

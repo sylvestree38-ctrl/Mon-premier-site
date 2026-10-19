@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Challenge Tailwind CSS</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-100 min-h-screen p-6">
+
+    <main class="max-w-6xl mx-auto p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <h1 class="text-xl font-bold mb-4">
+                Challenge 1 : MON STATUT D'APPRENTISSAGE
+            </h1>
+
+            <section class="bg-white rounded-xl p-10">
+
+                <!--badge-->
+                <div
+                    class="inline-flex items-center gap-2 bg-green-100 hover:bg-green-400 px-4 py-2 rounded-full transition-colors duration-300 cursor-pointer">
+
+                    <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+
+                    <span class="text-green-800 font-semibold">
+                        Formation en cours
+                    </span>
+                </div>
+            </section>
+
+            <h2 class="text-xl font-bold mt-10 mb-4">
+                Challenge 2 : Mon bouton interactif
+            </h2>
+
+            <section class="bg-white rounded-xl p-10 flex justify-center">
+
+                <button type="button"
+                    class="bg-violet-500 hover:bg-violet-700 text-white px-6 py-3 rounded-lg font-semibold transition-transform duration-300 hover:scale-105">
+                    Continuer à apprendre →
+                </button>
+
+            </section>
+            <h2 class="text-xl font-bold mt-10 mb-4">
+    Challenge 3 : Mon profil développeur
+</h2>
+
+<section class="bg-white rounded-xl p-6 flex justify-center">
+
+    <div class="flex items-center gap-4 w-full max-w-md border rounded-xl p-6 shadow-sm">
+
+        <!-- Photo de profil -->
+        <img src="images/profil.jpg" alt="Photo de profil"
+            class="w-16 h-16 rounded-full object-cover shrink-0">
+
+        <!-- Informations -->
+        <div>
+            <h3 class="font-bold text-lg">
+                Esther Sylvestre
+            </h3>
+
+            <p class="text-gray-500 text-sm">
+                Développeuse en formation
+            </p>
+
+            <p class="text-green-600 text-xs mt-2">
+                ● En apprentissage
+            </p>
+        </div>
+
+    </div> <!-- Fèmen Flexbox foto + enfòmasyon -->
+
+</section>
+            <!-- CHALLENGE 4 : MON PARCOURS DE FORMATION -->
+
+            <h2 class="text-xl font-bold mt-10 mb-4">
+                Challenge 4 : Mon parcours de formation
+            </h2>
+
+            <section class="bg-white rounded-xl p-10 flex justify-center">
+
+                <!-- Carte principale -->
+                <article class="w-full max-w-sm border border-pink-500 rounded-xl p-6 shadow-lg">
+
+                    <!-- Titre et badge -->
+                    <div class="flex justify-between items-center gap-3">
+
+                        <h3 class="font-bold text-lg">
+                            Parcours Développement Web
+                        </h3>
+
+                        <span class="bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full shrink-0">
+                            EN COURS
+                        </span>
+
+                    </div>
+
+                    <!-- Nombre de modules -->
+                    <div class="mt-6">
+
+                        <p class="text-4xl font-bold text-gray-900">
+                            4
+                            <span class="text-base font-normal text-gray-500">
+                                modules
+                            </span>
+                        </p>
+
+                    </div>
+
+                    <!-- Ligne de séparation -->
+                    <hr class="border-gray-200 my-6">
+
+                    <!-- Liste des compétences -->
+                    <ul class="space-y-4 text-gray-600">
+
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✓</span>
+                            HTML — Structure
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✓</span>
+                            CSS — Mise en page
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✓</span>
+                            Tailwind — Interface
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✓</span>
+                            JavaScript — Interactivité
+                        </li>
+
+                    </ul>
+
+                    <!-- Bouton -->
+                    <button type="button"
+                        class="w-full bg-pink-600 hover:bg-violet-700 text-white font-semibold py-3 px-4 rounded-lg mt-8 transition-colors duration-300 cursor-pointer">
+                        Voir mon parcours
+                    </button>
+
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>
