@@ -19,7 +19,7 @@
                 <h1 class="text-xl">Lumé</h1> <span class="text-xl">.</span>
             </div>
 
-            <div class="flex text-white items-center  justify-between gap-8">
+            <div class="flex max-sm:hidden text-white items-center  justify-between gap-8">
 
                 <a class="text-md" href="">À propos</a>
                 <a class="text-md" href="">Bienfaits</a>
@@ -41,10 +41,15 @@
                 </button>
 
                 <button
-                    class="bg-transparent font-bold border border-white px-6 py-2 rounded-full hover:bg-white hover:text-[#14291f]">
+                    class="bg-transparent max-sm:hidden font-bold border border-white px-6 py-2 rounded-full hover:bg-white hover:text-[#14291f]">
                     Découvrir
                 </button>
 
+                <!-- ici on cache le button lorsque c'est sous format ordinateur et on le rend visible quand c'est sous format téléphone avec max-sm:block-->
+                <button class="hover:bg-[#ffff]/10 hidden max-sm:block w-16 h-16 rounded-full relative">
+                    <i class="fa-solid fa-bars "></i>
+                   
+                </button>
 
             </div>
         </div>
@@ -54,9 +59,9 @@
     <main>
 
         <!-- SECTION HERO -->
-        <section class="bg-[#14291f] min-h-screen flex items-center   px-12">
+        <section class="bg-[#14291f] min-h-screen flex items-center max-sm:items-start max-sm:pt-16  px-12">
 
-            <div class="mx-auto max-w-7xl flex items-center gap-12 justify-between ">
+            <div class="mx-auto max-w-7xl flex max-sm:flex-col items-center gap-12 justify-between ">
                 <!-- DIV 1 : CONTENU Au centre -->
                 <div class="flex flex-col gap-6">
 
@@ -65,17 +70,17 @@
                         class="inline-flex w-fit items-center px-4 gap-3 text-[#c19a5b] border border-[#c19a5b] rounded-xl">
 
                         <i class="fa-solid fa-leaf"></i>
-                        <span>Formules 100% Végétales</span>
+                        <span class="max-sm:text-sm">Formules 100% Végétales</span>
 
                     </div>
 
                     <!-- Titre prencipal -->
                     <div>
-                        <h1 class="text-5xl text-white">
+                        <h1 class="text-5xl max-sm:text-3xl text-white">
                             La beauté naturelle,
 
                             <span class="block">
-                                <span class="italic text-[#c19a5b]">sublimée</span>
+                                <span class="italic  text-[#c19a5b]">sublimée</span>
                                 au quotidien
                             </span>
                         </h1>
@@ -89,8 +94,8 @@
                         </p>
                     </div>
 
-                    <!-- Boutons-->
-                    <div class="flex gap-4">
+                    <!-- Lorsque on es sur grand ecran notre section parente est à flex row mais lorsque nous allons sur petit ecran nous devons mettre flex-col en utilisant max-sm:flex-col -->
+                    <div class="flex max-sm:flex-col gap-4">
 
                         <button
                             class="bg-[#c19a5b] text-[#14291f] px-6 py-3 rounded-full font-semibold hover:bg-[#d4ae70] transition-colors">
@@ -108,8 +113,8 @@
                 <!-- FIN DIV 1 -->
 
 
-                <!-- DIV 2 : IMAge A DROIT -->
-                <div class="relative">
+                <!-- DIV 2 : IMAge A DROIT et caché sur petit ecran avec max-sm:hidden -->
+                <div class="relative max-sm:hidden ">
 
                     <img src="img/serum-lume.png" alt="Sérum de beauté Lumé" class="w-[500px]">
 
@@ -125,7 +130,7 @@
         <!-- SECTION À PROPOS -->
         <section class="bg-white">
 
-            <div class="max-w-7xl mx-auto px-6 py-24 flex flex-row items-center gap-12">
+            <div class="max-w-7xl mx-auto px-6 py-24 flex flex-row max-sm:flex-col items-center gap-12">
 
                 <!-- COLONNE GAUCHE : TEXTES -->
                 <div class="flex-1 flex flex-col gap-4">
@@ -137,21 +142,50 @@
                     </div>
 
                     <div>
-                        <h2 class="text-4xl font-medium text-[#14291f]">
-                            Une éthique du soin, de la <br>
+                        <h2 class="text-4xl max-sm:text-3xl font-medium text-[#14291f]">
+                            Une éthique du soin, de la 
+                            <!-- On ignore la balise br qui permet d'aller à la ligne -->
+                            <br class="max-sm:hidden">
                             racine à la peau
                         </h2>
                     </div>
 
+                    
+                    <!--Section image qui doit s'afficher juste sur petit ecran et se cacher sur grand ecran -->
+                    <div class="relative max-sm:block hidden">
+
+                        <!-- Fond décoratif derrière l’image -->
+                        <div class="absolute inset-0 bg-[#f3eee8] rounded-[2rem]"></div>
+
+                        <!-- Image -->
+                        <img src="img/serum-lume.png" alt="Sérum de beauté Lumé"
+                            class="relative z-10 w-80 h-auto mx-auto pt-16">
+
+                        <!-- Carte clients satisfaits -->
+                        <div
+                            class="bg-white absolute bottom-6 left-0 -translate-x-1/4 py-4 px-5 rounded-xl shadow-lg z-20">
+                            <p class="text-2xl max-sm:text-lg font-medium text-[#14291f]">
+                                +50 000
+                            </p>
+
+                            <p class="uppercase  text-gray-600 text-xs">
+                                Clients satisfaits
+                            </p>
+                        </div>
+
+                   
+
+                </div>
+
                     <div>
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 max-sm:text-sm leading-relaxed">
                             Fondée en 2018, Lumé sélectionne des plantes cultivées
                             de façon responsable et les transforme en formules
                             précises, testées dermatologiquement et sans compromis
                             sur l'efficacité.
                         </p>
 
-                        <p class="text-gray-600 leading-relaxed mt-4">
+                        <p class="text-gray-600 max-sm:text-sm leading-relaxed mt-4">
                             Chaque flacon est pensé pour durer, se recharger et
                             réduire notre impact sur la planète.
                         </p>
@@ -159,7 +193,7 @@
 
                     <div>
                         <button
-                            class="border inline-flex items-center gap-3 border-black rounded-full py-3 px-10 hover:bg-black hover:text-white transition-colors">
+                            class="border inline-flex max-sm:text-sm items-center gap-3 border-black rounded-full py-3 px-10 hover:bg-black hover:text-white transition-colors">
                             Découvrir notre démarche
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
@@ -168,8 +202,8 @@
                 </div>
                 <!-- FIN COLONNE GAUCHE -->
 
-                <!-- COLONNE DROITE : IMAGE -->
-                <div class="flex-1 w-full flex justify-center">
+                <!-- Section image qui doit s'afficher juste sur grand ecran et se cacher sur petit ecran -->->
+                <div class="flex-1 w-full max-sm:hidden flex justify-center">
 
                     <div class="relative w-[420px] h-[500px]">
 
