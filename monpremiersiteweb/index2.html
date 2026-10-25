@@ -128,7 +128,7 @@
 
 
         <!-- SECTION À PROPOS -->
-        <section class="bg-white">
+        <section id="apropos" class="bg-white">
 
             <div class="max-w-7xl mx-auto px-6 py-24 flex flex-row max-sm:flex-col items-center gap-12">
 
@@ -202,7 +202,7 @@
                 </div>
                 <!-- FIN COLONNE GAUCHE -->
 
-                <!-- Section image qui doit s'afficher juste sur grand ecran et se cacher sur petit ecran -->->
+                <!-- Section image qui doit s'afficher juste sur grand ecran et se cacher sur petit ecran -->
                 <div class="flex-1 w-full max-sm:hidden flex justify-center">
 
                     <div class="relative w-[420px] h-[500px]">
@@ -352,7 +352,187 @@
 
     <footer>
 
-    </footer>
+<!-- FOOTER : PIED DE PAGE LUMÉ -->
+
+<!--bg-[#14291f] : couleur de fond vert foncé
+    text-white   : couleur du texte par défaut
+    py-16        : espace intérieur en haut et en bas-->
+<footer id="contact" class="bg-[#14291f] text-white py-16">
+
+    <!--max-w-6xl : largeur maximale de 1152px
+        mx-auto   : centre le contenu horizontalement
+        px-6      : espace intérieur gauche et droite -->
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- grid            : active CSS Grid
+            grid-cols-1     : une colonne sur téléphone
+            md:grid-cols-2  : deux colonnes à partir de 768px
+            lg:grid-cols-4  : quatre colonnes à partir de 1024px
+            gap-10          : espace entre les colonnes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            
+            <!-- COLONNE 1 : LUMÉ -->
+
+            <!--flex-col    : place les éléments verticalement
+                items-start : aligne les éléments à gauche
+                gap-4       : espace entre les éléments-->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+
+                <!-- Logo -->
+                <h2 class="text-2xl font-serif">
+                    Lumé<span class="text-[#c19a5b]">.</span>
+                </h2>
+
+                <!-- Description -->
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    La beauté naturelle, sublimée
+                    au quotidien.
+                </p>
+
+                <!-- Réseaux sociaux -->
+                <div class="flex gap-3">
+
+                    <!-- Instagram -->
+                    <a href="#"
+                       aria-label="Instagram"
+                       class="border border-gray-600 w-9 h-9 rounded-full flex items-center justify-center hover:bg-[#c19a5b] hover:text-[#14291f] transition-colors duration-300">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="#"
+                       aria-label="Facebook"
+                       class="border border-gray-600 w-9 h-9 rounded-full flex items-center justify-center hover:bg-[#c19a5b] hover:text-[#14291f] transition-colors duration-300">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="#"
+                       aria-label="TikTok"
+                       class="border border-gray-600 w-9 h-9 rounded-full flex items-center justify-center hover:bg-[#c19a5b] hover:text-[#14291f] transition-colors duration-300">
+
+                        <i class="fa-brands fa-tiktok"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <!-- FIN COLONNE 1 -->
+
+            <!-- COLONNE 2 : BOUTIQUE -->
+
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+
+                <h3 class="text-lg font-semibold">
+                    Boutique
+                </h3>
+
+                <a href="#"
+                   class="text-gray-400 hover:text-[#c19a5b] transition-colors duration-300">
+                    Soins visage
+                </a>
+
+                <a href="#"
+                   class="text-gray-400 hover:text-[#c19a5b] transition-colors duration-300">
+                    Soins corps
+                </a>
+
+                <a href="#"
+                   class="text-gray-400 hover:text-[#c19a5b] transition-colors duration-300">
+                    Coffrets cadeaux
+                </a>
+
+            </div>
+            <!-- FIN COLONNE 2 -->
+
+            <!-- COLONNE 3 : ENTREPRISE -->
+
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+
+                <h3 class="text-lg font-semibold">
+                    Entreprise
+                </h3>
+
+                <!-- Ce lien nécessite id="apropos" dans la section À propos -->
+                <a href="#apropos"
+                   class="text-gray-400 hover:text-[#c19a5b] transition-colors duration-300">
+                    À propos
+                </a>
+
+                <a href="#"
+                   class="text-gray-400 hover:text-[#c19a5b] transition-colors duration-300">
+                    Mentions légales
+                </a>
+
+                <a href="#"
+                   class="text-gray-400 hover:text-[#c19a5b] transition-colors duration-300">
+                    Confidentialité
+                </a>
+
+            </div>
+            <!-- FIN COLONNE 3 -->
+
+            <!-- COLONNE 4 : CONTACT -->
+
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+
+                <h3 class="text-lg font-semibold">
+                    Contact
+                </h3>
+
+                <!-- Adresse courriel à compléter -->
+                <a href="mailto:contact@lume.com"
+                   class="text-gray-400 hover:text-[#c19a5b] transition-colors duration-300">
+
+                    <i class="fa-solid fa-envelope mr-2"></i>
+                    contact@lume.com
+
+                </a>
+
+                <!-- Téléphone à compléter -->
+                <p class="text-gray-400">
+                    <i class="fa-solid fa-phone mr-2"></i>
+                    +123456789
+                </p>
+
+                <!-- Adresse à compléter -->
+                <p class="text-gray-400">
+                    <i class="fa-solid fa-location-dot mr-2"></i>
+                    125, Rue des Palmiers, Bonapriso, Douala
+                </p>
+
+            </div>
+            <!-- FIN COLONNE 4 -->
+
+        </div>
+        <!-- FIN GRID -->
+
+        <!-- SÉPARATION ET COPYRIGHT -->
+
+        <!--border-t        : bordure supérieure
+            border-gray-700 : couleur de la bordure
+            mt-12           : marge extérieure en haut
+            pt-6            : espace intérieur en haut
+            text-center     : centre le texte-->
+        <div class="border-t border-gray-700 mt-12 pt-6 text-center">
+
+            <p class="text-gray-400 text-sm">
+                © 2026 Lumé. Tous droits réservés.
+            </p>
+
+        </div>
+
+    </div>
+    <!-- FIN CONTENEUR PRINCIPAL -->
+
+</footer>
+<!-- FIN FOOTER -->
 
 </body>
 
